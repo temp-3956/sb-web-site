@@ -22,6 +22,7 @@ export default function NewEmployeesPage({ user }) {
     const [search, setSearch] = useState("");
 
     const isManagement = user?.roles?.includes("management");
+    const isAdmin = user?.roles?.includes("admin");
 
     const getHeaders = () => {
         const token = localStorage.getItem("token");
@@ -375,8 +376,8 @@ export default function NewEmployeesPage({ user }) {
                                         >
                                             Edit
                                         </button>
-                                        
-                                        {isManagement && (
+
+                                        {isAdmin && (
                                             <button
                                                 className="btn-red"
                                                 onClick={() => handleDelete(emp.employee_id)}
