@@ -1627,3 +1627,36 @@ body.light .employee-table tr:hover {
 .employee-date-field {
     justify-content: flex-end;
 }
+
+.employee-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    align-items: end;
+}
+
+button,
+.btn-blue,
+.btn-green,
+.btn-red,
+.btn-gray {
+    height: 42px;
+    min-height: 42px;
+    padding: 0 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    line-height: 1;
+}
+
+.employee-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+.employee-actions button {
+    flex: 0 0 auto;
+}
