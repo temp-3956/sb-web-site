@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const API = import.meta.env.VITE_API_URL;
 
-export default function NewEmployeesPage() {
+export default function NewEmployeesPage({ user }) {
     const [employees, setEmployees] = useState([]);
 
     const [form, setForm] = useState({
@@ -20,6 +20,8 @@ export default function NewEmployeesPage() {
 
     const [statusFilter, setStatusFilter] = useState("all");
     const [search, setSearch] = useState("");
+
+    const isManagement = user?.roles?.includes("management");
 
     const getHeaders = () => {
         const token = localStorage.getItem("token");
@@ -373,13 +375,15 @@ export default function NewEmployeesPage() {
                                         >
                                             Edit
                                         </button>
-
-                                        <button
-                                            className="btn-red"
-                                            onClick={() => handleDelete(emp.employee_id)}
-                                        >
-                                            Delete
-                                        </button>
+                                        
+                                        {isManagement && (
+                                            <button
+                                                className="btn-red"
+                                                onClick={() => handleDelete(emp.employee_id)}
+                                            >
+                                                Delete
+                                            </button>
+                                        )}
 
                                         <button
                                             className="btn-green"
