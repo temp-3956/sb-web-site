@@ -225,21 +225,37 @@ export default function NewEmployeesPage() {
                         onChange={handleChange}
                     />
 
-                    <input
-                        name="start_date"
-                        type="date"
-                        value={form.start_date}
-                        onChange={handleChange}
-                    />
+                    <div className="employee-date-group">
 
-                    {editingId && (
-                        <input
-                            name="end_date"
-                            type="date"
-                            value={form.end_date}
-                            onChange={handleChange}
-                        />
-                    )}
+                        <div className="employee-date-field">
+                            <label className="small">
+                                Start Date
+                            </label>
+
+                            <input
+                                name="start_date"
+                                type="date"
+                                value={form.start_date}
+                                onChange={handleChange}
+                            />
+                        </div>
+
+                        {editingId && (
+                            <div className="employee-date-field">
+                                <label className="small">
+                                    End Date
+                                </label>
+
+                                <input
+                                    name="end_date"
+                                    type="date"
+                                    value={form.end_date}
+                                    onChange={handleChange}
+                                />
+                            </div>
+                        )}
+
+                    </div>
 
                     <input
                         name="department"

@@ -1590,3 +1590,21 @@ body.light .employee-table tr {
 body.light .employee-table tr:hover {
     background: #f1f5f9;
 }
+
+.employee-date-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+}
+
+.employee-date-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.employee-date-field label {
+    font-size: 13px;
+    color: #94a3b8;
+    font-weight: 600;
+}
