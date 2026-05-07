@@ -1608,3 +1608,22 @@ body.light .employee-table tr:hover {
     color: #94a3b8;
     font-weight: 600;
 }
+
+.employee-form input,
+.employee-form select,
+.employee-form textarea {
+    height: 42px;
+}
+
+.employee-form textarea {
+    min-height: 120px;
+    height: auto;
+}
+
+.employee-date-field input {
+    width: 100%;
+}
+
+.employee-date-field {
+    justify-content: flex-end;
+}
